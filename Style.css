@@ -274,3 +274,57 @@ footer {
 .btn-contacto:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+
+    /* Ajuste general */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR más compacta */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    nav a {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    /* HERO no tan grande */
+    .hero {
+        padding-left: 20px;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    /* CARDS no se desborden */
+    .hero-cards {
+        right: 20px;
+        bottom: -40px;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    /* ABOUT más ajustado */
+    .about {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    /* SERVICIOS más compactos */
+    .services {
+        padding: 40px 20px;
+    }
+
+    .service-container {
+        gap: 15px;
+    }
+}
+
