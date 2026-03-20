@@ -277,54 +277,61 @@ footer {
 
 @media (max-width: 768px) {
 
-    /* Ajuste general */
-    body {
-        overflow-x: hidden;
-    }
-
-    /* NAVBAR más compacta */
+    /* NAVBAR */
     .navbar {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 15px 20px;
     }
 
-    nav a {
-        margin-right: 10px;
-        font-size: 14px;
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    /* HERO no tan grande */
+        nav a {
+            margin: 0;
+            font-size: 14px;
+        }
+
+    .btn-nav {
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+
+    /* HERO */
     .hero {
-        padding-left: 20px;
+        padding: 20px;
         height: auto;
     }
 
     .hero-text h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    /* CARDS no se desborden */
+    /* CARDS (AQUÍ ESTABA EL PROBLEMA GRANDE) */
     .hero-cards {
-        right: 20px;
-        bottom: -40px;
+        position: static; /* 🔥 clave */
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .card {
-        width: 150px;
+        width: 140px;
     }
 
-    /* ABOUT más ajustado */
+    /* ABOUT */
     .about {
-        padding: 60px 20px;
-        gap: 30px;
-    }
-
-    /* SERVICIOS más compactos */
-    .services {
+        flex-direction: column;
         padding: 40px 20px;
     }
 
-    .service-container {
-        gap: 15px;
+    .about-img img {
+        width: 100%;
     }
 }
 
